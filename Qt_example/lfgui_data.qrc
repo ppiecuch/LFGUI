@@ -1,0 +1,20 @@
+<RCC>
+  <qresource>
+    <file alias="FreeSans.ttf">../lfgui_data/FreeSans.ttf</file>
+    <file alias="gui_ball.png">../lfgui_data/gui_ball.png</file>
+    <file alias="gui_ball_dent.png">../lfgui_data/gui_ball_dent.png</file>
+    <file alias="gui_ball_dent_half.png">../lfgui_data/gui_ball_dent_half.png</file>
+    <file alias="gui_checkbox_checked.png">../lfgui_data/gui_checkbox_checked.png</file>
+    <file alias="gui_checkbox_unchecked.png">../lfgui_data/gui_checkbox_unchecked.png</file>
+    <file alias="gui_slider_background.png">../lfgui_data/gui_slider_background.png</file>
+    <file alias="gui_torus.png">../lfgui_data/gui_torus.png</file>
+    <file alias="gui_torus_dot.png">../lfgui_data/gui_torus_dot.png</file>
+    <file alias="gui_torus_filled.png">../lfgui_data/gui_torus_filled.png</file>
+    <file alias="gui_torus_filled_highlighted.png">../lfgui_data/gui_torus_filled_highlighted.png</file>
+    <file alias="gui_window.png">../lfgui_data/gui_window.png</file>
+    <file alias="gui_window_highlighted.png">../lfgui_data/gui_window_highlighted.png</file>
+    <file alias="gui_window_highlighted_transparent.png">../lfgui_data/gui_window_highlighted_transparent.png</file>
+    <file alias="gui_window_transparent.png">../lfgui_data/gui_window_transparent.png</file>
+    <file alias="README.txt">../lfgui_data/README.txt</file>
+  </qresource>
+</RCC>

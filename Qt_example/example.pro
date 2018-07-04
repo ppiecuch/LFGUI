@@ -39,3 +39,5 @@ HEADERS  += \
         ../stk_debugging.h \
         ../stk_misc.h \
         ../stk_timer.h
+
+RESOURCES += lfgui_data.qrc
