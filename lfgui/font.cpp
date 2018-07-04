@@ -4,8 +4,7 @@
 
 #include "font.h"
 #include "geometry.h"
-
-#include <iostream>
+#include "xtnstreambuf.h"
 
 namespace lfgui
 {
@@ -56,7 +55,7 @@ font::font(const std::string& filename)
     STK_STACKTRACE
     std::streampos size;
 
-    std::ifstream file(filename,std::ios::in|std::ios::binary|std::ios::ate);
+    std::xtn::ifstream file(filename,std::ios::in|std::ios::binary|std::ios::ate);
     if(!file.is_open())
         throw lfgui::exception("LFGUI Error: Can't load font file \""+filename+"\".");
 

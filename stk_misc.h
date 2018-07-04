@@ -312,7 +312,9 @@ struct assert_handler
     static void jmp_or_default()
     {
         bool jmp_buf_is_set=false;
-#if defined(__gnu_linux__)
+#if defined(__APPLE__)
+        jmp_buf_is_set=stk::assert_handler::handler()[0];
+#elif defined(__gnu_linux__)
         jmp_buf_is_set=stk::assert_handler::handler()->__jmpbuf[0];
 #else
         // I don't know if this works on all platforms, but in MinGW this seems to be an int64_t[2]
@@ -477,7 +479,7 @@ std::vector<direntry> read_dir(std::string dirname);
 
 /// \brief Inserts an element into a vector if it's not already in there (operator==).
 template<typename T>
-constexpr void push_back_unique(std::vector<T>& vec,const T& v)
+constex14 void push_back_unique(std::vector<T>& vec,const T& v)
 {
     for(auto e:vec)
         if(e==v)
@@ -487,7 +489,7 @@ constexpr void push_back_unique(std::vector<T>& vec,const T& v)
 
 /// \brief Inserts an element into a vector if it's not already in there (operator==).
 template<typename T>
-constexpr typename std::vector<T>::iterator find(std::vector<T>& vec,const T& v)
+constex14 typename std::vector<T>::iterator find(std::vector<T>& vec,const T& v)
 {
     for(typename std::vector<T>::iterator it=vec.begin();it!=vec.end();it++)
         if(*it==v)
@@ -497,7 +499,7 @@ constexpr typename std::vector<T>::iterator find(std::vector<T>& vec,const T& v)
 
 /// Takes a void pointer and returns the data there as the given type. Like a dereference but without UB. Copies the data.
 template<typename T>
-constexpr T unaligned_cast(const void* const ptr)
+constex14 T unaligned_cast(const void* const ptr)
 {
     T ret;
     char* input =(char*)ptr;

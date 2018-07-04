@@ -7,7 +7,9 @@
 #include <memory>
 #include <exception>
 #include <functional>
-#include <intrin.h>
+#ifdef _WIN32
+# include <intrin.h>
+#endif
 
 #include "../stk_misc.h"
 #include "../stk_debugging.h"

@@ -1,13 +1,7 @@
-QT       += core gui
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT += core gui widgets
 
 TARGET = example
 TEMPLATE = app
-
-CONFIG += C++11
-
-QMAKE_CXXFLAGS += #-O2# -mavx
 
 INCLUDEPATH +=  ../external/
 

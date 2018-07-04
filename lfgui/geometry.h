@@ -24,7 +24,11 @@ struct exception : public std::exception
             custom_handler()(text);
         else
         {
+#ifdef __APPLE__
+            __asm__("int $3\n" : : );
+#else
             __debugbreak();
+#endif
             exit(-1);
         }
     }
