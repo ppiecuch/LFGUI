@@ -131,6 +131,8 @@ public:
 
         if(!m_file->isOpen())
             setstate(std::ios::failbit);
+        else if (mode & ios_base::ate)
+            m_file->seek(m_file->size());
     }
 
     bool is_open() const { return m_file->isOpen(); }
